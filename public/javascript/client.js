@@ -11,6 +11,9 @@ LET Medlemmar [
 
 */
 
+
+
+
 function showVID(i) {
  
     var x = document.getElementById(i);
@@ -22,13 +25,9 @@ function showVID(i) {
   }
 
 
-
 window.onload = function() {
    
-    
-    
-    
-
+  
     // Hämtar data från API
     // 
     forfragan = new XMLHttpRequest();
@@ -36,6 +35,8 @@ window.onload = function() {
     forfragan.onload = function() {
         console.log("Svar från servern");
         let filmer = JSON.parse(this.response);
+
+        
         
        // console.log(filmer[0]);
         let lista = "";
@@ -112,7 +113,7 @@ window.onload = function() {
             
             lista += "<table border=1><tr><td class = 'title' colspan=3>Titel: " + siffra +" " + filmer[i].title + "</div></td></tr>";
             lista += "<tr><td width='30%' class='myXDIV'><div class='myDIV'><img class='image' src=' " + filmer[i].image + "'></div></td>";
-            lista += "<td > <button onclick='showVID(" + i + ")'>Visa/göm trailer</button> <div class='hide' id='" + i + "'>";
+            lista += "<td > <button onclick='showVID(" + i + ")'>Visa/göm trailer</button> <div id='" + i + "'>";
              
             if ( trailers[i] === undefined ){
                 trailer_trailer = "";
@@ -126,11 +127,24 @@ window.onload = function() {
 
             lista += "</div></td><td>" + filmer[i].description +  "</td></tr></table>";
             siffra++;
+
+            
           }
 
             output1.innerHTML=lista;
+
+          // loop som gömmer alla video divs från början
+            for (let i = 0; i < filmer.length; i++) { 
+            var e = document.getElementById(i);
+            if(e.offsetWidth > 0 || e.offsetHeight > 0){
+              e.style.display = 'none';
+            }}
+            
           
     };
+    
+
+    
     forfragan.send();
 
 }
