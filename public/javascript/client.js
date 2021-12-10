@@ -77,13 +77,14 @@ window.onload = function() {
                 trailer_trailer = "";
             } else {
             trailer_trailer = trailers[i].trailer;
-            siffra++;
+            
         }
              
             lista += trailer_trailer;
            //   lista += '<iframe width="560" height="315" src="https://www.youtube.com/embed/8ykEy-yPBFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 
             lista += "</div></td><td>" + filmer[i].description +  "</td></tr></table>";
+            siffra++;
           }
 
             output1.innerHTML=lista;
