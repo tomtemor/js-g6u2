@@ -62,8 +62,49 @@ window.onload = function() {
             },
             {title:"Pom Poko", 
             trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/_7cowIHjCD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            },
+            {title:"Whisper of the Heart", 
+            trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/0pVkiod6V0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            },
+            {title:"Princess Mononoke", 
+            trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/4OiMOHRDs14" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            },
+            {title:"My Neighbors the Yamadas", 
+            trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/1C9ujuCPlnY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            },
+            {title:"Spirited Away", 
+            trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/ByXuk9QqQkk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            },
+            {title:"The Cat Returns", 
+            trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/Gp-H_YOcYTM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            },
+            {title:"Howl's Moving Castle", 
+            trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/iwROgK94zcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            },
+            {title:"Tales from Earthsea", 
+            trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/8hxYx3Jq3kI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            },
+            {title:"Ponyo", 
+            trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/CsR3KVgBzSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            },
+            {title:"Arrietty", 
+            trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/9CtIXPhPo0g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            },
+            {title:"From Up on Poppy Hill", 
+            trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/9nzpk_Br6yo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            },
+            {title:"The Wind Rises", 
+            trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/2QFBZgAZx7g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            },
+            {title:"The Tale of the Princess Kaguya", 
+            trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/W71mtorCZDw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            },
+            {title:"When Marnie Was There", 
+            trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/jjmrxqcQdYg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            },
+            {title:"The Red Turtle", 
+            trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/Sw7BggqBpTk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
             }
-        
         ];
        // console.log(trailers[0].trailer);
        let siffra = 1;
