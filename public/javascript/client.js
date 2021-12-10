@@ -11,6 +11,17 @@ LET Medlemmar [
 
 */
 
+function showVID(i) {
+ 
+    var x = document.getElementById(i);
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+
 
 window.onload = function() {
     
