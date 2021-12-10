@@ -25,13 +25,33 @@
         .title {
             background-color: rgb(230, 230, 230);
         }
+
+        .image {
+          border: 3px solid black;
+          width:30%; 
+          height:30%;
+        }
         
         </style>
+<script>
+function showVID(i) {
+ 
+  var x = document.getElementById(i);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+</script>
+
 </head>
 <body>
+  <div class="hide">Testar hide</div>
     <h1>Filmregister Grupp 6 SYNED21JON</h1>
     <p id="output1"></p>
-
+   
     
 </body>
 </html>

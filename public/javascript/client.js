@@ -48,8 +48,9 @@ window.onload = function() {
        // console.log(trailers[0].trailer);
         for (let i = 0; i < filmer.length; i++) {
             
-            lista += "<table border=1><tr><td class = 'title' colspan=3><div class='myDIV'>Titel: "+ filmer[i].title + "</div></td></tr>";
-            lista += "<tr><td width='30%'><div class='nohide'><img class='nohide' width=30% height=30% src=' " + filmer[i].image + "'></div></td><td>";
+            lista += "<table border=1><tr><td class = 'title' colspan=3>Titel: "+ filmer[i].title + "</div></td></tr>";
+            lista += "<tr><td width='30%' class='myXDIV'><div class='myDIV'><img class='image' src=' " + filmer[i].image + "'></div></td>";
+            lista += "<td > <button onclick='showVID(" + i+1 + ")'>Visa/göm trailer</button> <div class='hide' id='1'>";
              
             if ( trailers[i] === undefined ){
                 trailer_trailer = "";
@@ -60,7 +61,7 @@ window.onload = function() {
             lista += trailer_trailer;
            //   lista += '<iframe width="560" height="315" src="https://www.youtube.com/embed/8ykEy-yPBFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 
-            lista += "</td><td>" + filmer[i].description +  "</td></tr></table>";
+            lista += "</div></td><td>" + filmer[i].description +  "</td></tr></table>";
           }
 
             output1.innerHTML=lista;
