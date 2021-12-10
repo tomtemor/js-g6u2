@@ -1,0 +1,15 @@
+{
+  "name": "js-g6u2",
+  "version": "1.0.0",
+  "description": "JavaScript, Grupp 6, Gruppuppgift 2, SYNED21JON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christer Klasson, Ida Gustafsson, Julia Magnusson, Marianne Nordlund, Matti Heinonen, Ronja �sterback",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  }
+}
