@@ -61,7 +61,7 @@ window.onload = function() {
             
             lista += "<table border=1><tr><td class = 'title' colspan=3>Titel: "+ filmer[i].title + "</div></td></tr>";
             lista += "<tr><td width='30%' class='myXDIV'><div class='myDIV'><img class='image' src=' " + filmer[i].image + "'></div></td>";
-            lista += "<td > <button onclick='showVID(" + i+1 + ")'>Visa/göm trailer</button> <div class='hide' id='1'>";
+            lista += "<td > <button onclick='showVID(" + i + ")'>Visa/göm trailer</button> <div class='hide' id='" + i + "'>";
              
             if ( trailers[i] === undefined ){
                 trailer_trailer = "";
