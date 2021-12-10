@@ -53,13 +53,17 @@ window.onload = function() {
             },
             {title:"Only Yesterday", 
             trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/x0ZrjocXVJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            },
+            {title:"Porco Rosso", 
+            trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/awEC-aLDzjs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
             }
         
         ];
        // console.log(trailers[0].trailer);
+       let siffra = 1;
         for (let i = 0; i < filmer.length; i++) {
             
-            lista += "<table border=1><tr><td class = 'title' colspan=3>Titel: "+ filmer[i].title + "</div></td></tr>";
+            lista += "<table border=1><tr><td class = 'title' colspan=3>Titel: " + siffra +" " + filmer[i].title + "</div></td></tr>";
             lista += "<tr><td width='30%' class='myXDIV'><div class='myDIV'><img class='image' src=' " + filmer[i].image + "'></div></td>";
             lista += "<td > <button onclick='showVID(" + i + ")'>Visa/göm trailer</button> <div class='hide' id='" + i + "'>";
              
@@ -67,6 +71,7 @@ window.onload = function() {
                 trailer_trailer = "";
             } else {
             trailer_trailer = trailers[i].trailer;
+            siffra++;
         }
              
             lista += trailer_trailer;
