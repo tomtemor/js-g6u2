@@ -14,7 +14,7 @@ LET Medlemmar [
 
 
 
-function showVID(i) {
+function showVID(i) { //funktion för att gömma/visa filmerna anropas med onclick på knappen
  
     var x = document.getElementById(i);
     if (x.style.display === "none") {
@@ -42,7 +42,7 @@ window.onload = function() {
         let lista = "";
         let image ="";
         let trailer_trailer = "";
-        let trailers =[
+        let trailers =[  // array med lista av objekt med filmerna
             {title:'Castle in the Sky', 
             trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/8ykEy-yPBFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
             },
@@ -109,11 +109,13 @@ window.onload = function() {
         ];
        // console.log(trailers[0].trailer);
        let siffra = 1;
-        for (let i = 0; i < filmer.length; i++) {
+       lista += "<table border=0>";
+        for (let i = 0; i < filmer.length; i++) { // loopar igenom alla filmer i filmer och sparar  
             
-            lista += "<table border=1><tr><td class = 'title' colspan=3>Titel: " + siffra +" " + filmer[i].title + "</div></td></tr>";
-            lista += "<tr><td width='30%' class='myXDIV'><div class='myDIV'><img class='image' src=' " + filmer[i].image + "'></div></td>";
-            lista += "<td > <button onclick='showVID(" + i + ")'>Visa/göm trailer</button> <div id='" + i + "'>";
+            lista += "<tr><td class = 'title' colspan=3>Titel: " + siffra +" " + filmer[i].title + "</div></td></tr>";
+            lista += "<tr><td style='border:none; width: 20%'> <div class='tab1'></div></td><td style='border:none; width: 40%;'></td><td style='border:none;'></td></tr>";
+            lista += "<tr><td> <img class='image' src=' " + filmer[i].image + "'></td>";
+            lista += "<td style='vertical-align: top;'> <button onclick='showVID(" + i + ")'>Visa/göm trailer</button> <div id='" + i + "'>";
              
             if ( trailers[i] === undefined ){
                 trailer_trailer = "";
@@ -125,12 +127,12 @@ window.onload = function() {
             lista += trailer_trailer;
            //   lista += '<iframe width="560" height="315" src="https://www.youtube.com/embed/8ykEy-yPBFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 
-            lista += "</div></td><td>" + filmer[i].description +  "</td></tr></table>";
+            lista += "</div></td><td>" + filmer[i].description +  "</td></tr>";
             siffra++;
-
-            
           }
+          lista += "</table>";
 
+console.log(lista);
             output1.innerHTML=lista;
 
           // loop som gömmer alla video divs från början
