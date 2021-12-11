@@ -1,20 +1,18 @@
 /*
 Gruppuppgift del 2, hämta från API
 SYNED21JON Grupp 6
-LET Medlemmar [
-{Christer Klasson}}, 
+LET Medlemmar = [
+{Christer Klasson}, 
 {Ida Gustafsson}, 
 {Julia Magnusson}, 
 {Marianne Nordlund}, 
 {Matti Heinonen}, 
 {Ronja Österback}
-
+];
 */
 
 
-
-
-function showVID(i) { //funktion för att gömma/visa filmerna anropas med onclick på knappen
+function showVID(i) { //funktion för att gömma/visa filmerna anropas med onclick på knapparna
  
     var x = document.getElementById(i);
     if (x.style.display === "none") {
@@ -35,12 +33,8 @@ window.onload = function() {
     forfragan.onload = function() {
         console.log("Svar från servern");
         let filmer = JSON.parse(this.response);
-
-        
-        
-       // console.log(filmer[0]);
+        console.log(filmer);
         let lista = "";
-        let image ="";
         let trailer_trailer = "";
         let trailers =[  // array med lista av objekt med filmerna
             {title:'Castle in the Sky', 
@@ -107,12 +101,12 @@ window.onload = function() {
             trailer:'<iframe width="560" height="315" src="https://www.youtube.com/embed/Sw7BggqBpTk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
             }
         ];
-       // console.log(trailers[0].trailer);
+       // siffra är bara en räknare för numrering av filmerna i listan
        let siffra = 1;
-       lista += "<table border=0>";
+       lista += "<table border='0'>";
         for (let i = 0; i < filmer.length; i++) { // loopar igenom alla filmer i filmer och sparar i lista
             
-            lista += "<tr><td class = 'title' colspan=3>Titel: " + siffra +" " + filmer[i].title + "</div></td></tr>";
+            lista += "<tr><td class = 'title' colspan=3>" + siffra +". " + filmer[i].title + "</b> | " + filmer[i].release_date + " | " + filmer[i].original_title + "</div></td></tr>";
             lista += "<tr><td style='border:none; width: 20%'> <div class='tab1'></div></td><td style='border:none; width: 40%;'></td><td style='border:none;'></td></tr>";
             lista += "<tr><td> <img class='image' src=' " + filmer[i].image + "'></td>";
             lista += "<td style='vertical-align: top;'> <button onclick='showVID(" + i + ")'>Visa/göm trailer</button> <div id='" + i + "'>";
@@ -124,15 +118,13 @@ window.onload = function() {
             
         }
              
-            lista += trailer_trailer;
-           //   lista += '<iframe width="560" height="315" src="https://www.youtube.com/embed/8ykEy-yPBFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-
+            lista += trailer_trailer; // lägger till youtube-iframe-koden för trailern
+           
             lista += "</div></td><td>" + filmer[i].description +  "</td></tr>";
             siffra++;
           }
           lista += "</table>";
 
-        //console.log(lista);
             output1.innerHTML=lista;  // skickar html-koden i 'lista' till output1
 
           // loop som gömmer alla video divs från början
@@ -145,7 +137,6 @@ window.onload = function() {
           
     };
     
-
     
     forfragan.send();
 

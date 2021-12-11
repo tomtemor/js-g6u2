@@ -3,15 +3,15 @@ index.js
 
 Gruppuppgift del 2, hämta från API
 SYNED21JON Grupp 6
-LET Medlemmar [
-{Christer Klasson}}, 
-{Ida Gustafsson}, 
-{Julia Magnusson}, 
-{Marianne Nordlund}, 
-{Matti Heinonen}, 
-{Ronja Österback}
-
+Medlemmar:
+Christer Klasson 
+Ida Gustafsson 
+Julia Magnusson 
+Marianne Nordlund
+Matti Heinonen 
+Ronja Österback
 */
+
 const express = require("express");
 const app = express();
 app.get("/", (req, res) => {
