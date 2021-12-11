@@ -113,7 +113,7 @@ window.onload = function() {
           }
           lista += "</table>";
 
-            output1.innerHTML=lista;  // skickar html-koden i 'lista' till output1
+            output1.innerHTML=lista;  // skickar innehållet(html-koden) i 'lista' till en p med id output1 i index.html
 
           // loop som gömmer alla video divs från början
             for (let i = 0; i < filmer.length; i++) { 
