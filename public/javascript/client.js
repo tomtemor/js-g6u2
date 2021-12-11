@@ -12,28 +12,16 @@ LET Medlemmar = [
 */
 
 
-function showVID(i) { //funktion för att gömma/visa filmerna anropas med onclick på knapparna
- 
-    var x = document.getElementById(i);
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
-
-
 window.onload = function() {
    
   
     // Hämtar data från API
-    // 
     forfragan = new XMLHttpRequest();
     forfragan.open("GET", "https://ghibliapi.herokuapp.com/films");
     forfragan.onload = function() {
         console.log("Svar från servern");
         let filmer = JSON.parse(this.response);
-        console.log(filmer);
+       // console.log(filmer);
         let lista = "";
         let trailer_trailer = "";
         let trailers =[  // array med lista av objekt med filmerna
@@ -140,4 +128,16 @@ window.onload = function() {
     
     forfragan.send();
 
+}
+
+
+
+function showVID(i) { //funktion för att gömma/visa filmerna anropas med onclick på knapparna
+ 
+  var x = document.getElementById(i);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
