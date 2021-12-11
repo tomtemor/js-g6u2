@@ -110,7 +110,7 @@ window.onload = function() {
        // console.log(trailers[0].trailer);
        let siffra = 1;
        lista += "<table border=0>";
-        for (let i = 0; i < filmer.length; i++) { // loopar igenom alla filmer i filmer och sparar  
+        for (let i = 0; i < filmer.length; i++) { // loopar igenom alla filmer i filmer och sparar i lista
             
             lista += "<tr><td class = 'title' colspan=3>Titel: " + siffra +" " + filmer[i].title + "</div></td></tr>";
             lista += "<tr><td style='border:none; width: 20%'> <div class='tab1'></div></td><td style='border:none; width: 40%;'></td><td style='border:none;'></td></tr>";
@@ -132,8 +132,8 @@ window.onload = function() {
           }
           lista += "</table>";
 
-console.log(lista);
-            output1.innerHTML=lista;
+        //console.log(lista);
+            output1.innerHTML=lista;  // skickar html-koden i 'lista' till output1
 
           // loop som gömmer alla video divs från början
             for (let i = 0; i < filmer.length; i++) { 
