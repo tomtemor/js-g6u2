@@ -8,6 +8,7 @@ window.onload = function () {
     console.log("Svar från servern");
 
     let filmer = JSON.parse(this.response);
+    console.log(filmer);
     let lista = "";
     let trailer_trailer = "";
     // Array med lista av filmerna som objekt.
@@ -154,7 +155,10 @@ window.onload = function () {
 
       lista += trailer_trailer; // Lägger till youtube-iframe-koden för trailern.
 
-      lista += "</div></td><td>" + filmer[i].description + "</td></tr>";
+      lista += "</div></td><td>" + filmer[i].description;
+      lista += "<br><br><button id='morei_" + i + "' onclick='showInfo(" + i + ")'>mer info...</button><div id='info_" + i + "'>Director: " + filmer[i].director +"<br>Producer: " + filmer[i].producer +"<br>Lenght: " + filmer[i].running_time + " minutes" + "<br>Original title pronunciation: " + filmer[i].original_title_romanised;
+      
+      lista += "</div></td></tr>";
       siffra++;
     }
 
@@ -165,12 +169,16 @@ window.onload = function () {
     // Loop som gömmer alla video divs från början.
     for (let i = 0; i < filmer.length; i++) {
       let e = document.getElementById(i);
+      let inf = document.getElementById("info_"+i);
 
       if (e.offsetWidth > 0 || e.offsetHeight > 0) {
         e.style.display = "none";
+        inf.style.display = "none";
       }
     }
   };
+
+  
 
   forfragan.send();
 };
@@ -183,5 +191,22 @@ function showVID(i) {
     x.style.display = "block";
   } else {
     x.style.display = "none";
+  }
+}
+
+// Funktion för att gömma/visa mer info
+function showInfo(i) {
+  let inf = document.getElementById("info_"+i);
+  let buu = document.getElementById("morei_"+i);
+  buu.innerText   = "mer info...";
+ 
+
+  if (inf.style.display === "none") {
+    inf.style.display = "block";
+    buu.innerText   = "göm info";
+  } else {
+    inf.style.display = "none"; 
+    buu.innerText   = "mer info...";
+ 
   }
 }
