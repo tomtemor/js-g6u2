@@ -140,9 +140,9 @@ window.onload = function () {
       lista +=
         "<tr><td> <img class='image' src=' " + filmer[i].image + "'></td>";
       lista +=
-        "<td style='vertical-align: top;'> <button onclick='showVID(" +
+        "<td style='vertical-align: top;'> <button id='videb_" + i + "'onclick='showVID(" +
         i +
-        ")'>Visa/göm trailer</button> <div id='" +
+        ")'>Visa trailer</button> <div id='" +
         i +
         "'>";
 
@@ -186,11 +186,15 @@ window.onload = function () {
 // Funktion för att gömma/visa filmerna anropas med onclick på knapparna
 function showVID(i) {
   let x = document.getElementById(i);
+  let videbu = document.getElementById("videb_"+i);
+  videbu.innerText   = "Visa trailer";
 
   if (x.style.display === "none") {
     x.style.display = "block";
+    videbu.innerText   = "göm trailer";
   } else {
     x.style.display = "none";
+    videbu.innerText   = "Visa trailer";
   }
 }
 
@@ -198,9 +202,9 @@ function showVID(i) {
 function showInfo(i) {
   let inf = document.getElementById("info_"+i);
   let buu = document.getElementById("morei_"+i);
+  
   buu.innerText   = "mer info...";
- 
-
+  
   if (inf.style.display === "none") {
     inf.style.display = "block";
     buu.innerText   = "göm info";
