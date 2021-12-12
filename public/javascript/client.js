@@ -166,7 +166,7 @@ window.onload = function () {
 
     output1.innerHTML = lista; // Skickar innehållet (html-koden) i 'lista' till en <p> med id output1 i index.html.
 
-    // Loop som gömmer alla video divs från början.
+    // Loop som gömmer alla video divs och mer info-texter från början.
     for (let i = 0; i < filmer.length; i++) {
       let e = document.getElementById(i);
       let inf = document.getElementById("info_"+i);
