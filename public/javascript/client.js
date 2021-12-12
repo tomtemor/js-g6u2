@@ -173,15 +173,15 @@ window.onload = function () {
   };
 
   forfragan.send();
-
-  // Funktion för att gömma/visa filmerna anropas med onclick på knapparna
-  function showVID(i) {
-    let x = document.getElementById(i);
-
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
 };
+
+// Funktion för att gömma/visa filmerna anropas med onclick på knapparna
+function showVID(i) {
+  let x = document.getElementById(i);
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
