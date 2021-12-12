@@ -156,7 +156,7 @@ window.onload = function () {
 
       lista += "</div></td><td style='vertical-align: top;'>" + filmer[i].description;
       //mer info-knappar och divs för innehållet
-      lista += "<br><br><button id='morei_" + i + "' onclick='showInfo(" + i + ")'>mer info...</button><div id='info_" + i + "'>Director: " + filmer[i].director +"<br>Producer: " + filmer[i].producer +"<br>Lenght: " + filmer[i].running_time + " minutes" + "<br>Original title pronunciation: " + filmer[i].original_title_romanised;
+      lista += "<br><br><button id='morei_" + i + "' onclick='showInfo(" + i + ")'>mer info...</button><br><br><div class='morei' id='info_" + i + "'>Director: " + filmer[i].director +"<br>Producer: " + filmer[i].producer +"<br>Lenght: " + filmer[i].running_time + " minutes" + "<br>Original title pronunciation: " + filmer[i].original_title_romanised;
       
       lista += "</div></td></tr>";
       siffra++;
