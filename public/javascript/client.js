@@ -142,7 +142,7 @@ window.onload = function () {
       lista +=
         "<td style='vertical-align: top;'> <button id='videb_" + i + "'onclick='showVID(" +
         i +
-        ")'>visa trailer</button> <div id='" +
+        ")'>Visa trailer</button> <div id='" +
         i +
         "'>";
 
@@ -156,7 +156,7 @@ window.onload = function () {
 
       lista += "</div></td><td style='vertical-align: top;'>" + filmer[i].description;
       //mer info-knappar och divs för innehållet
-      lista += "<br><br><button id='morei_" + i + "' onclick='showInfo(" + i + ")'>mer info...</button><br><br><div class='morei' id='info_" + i + "'>Regissör: " + filmer[i].director +"<br>Producent: " + filmer[i].producer +"<br>Längd: " + filmer[i].running_time + " minuter" + "<br>Originaltitel uttal: " + filmer[i].original_title_romanised;
+      lista += "<br><br><button id='morei_" + i + "' onclick='showInfo(" + i + ")'>Mer info...</button><br><br><div class='morei' id='info_" + i + "'>Regissör: " + filmer[i].director +"<br>Producent: " + filmer[i].producer +"<br>Längd: " + filmer[i].running_time + " minuter" + "<br>Originaltitel uttal: " + filmer[i].original_title_romanised;
       
       lista += "</div></td></tr>";
       siffra++;
@@ -187,14 +187,14 @@ window.onload = function () {
 function showVID(i) {
   let x = document.getElementById(i);
   let videbu = document.getElementById("videb_"+i);
-  videbu.innerText   = "visa trailer";
+  videbu.innerText   = "Visa trailer";
 
   if (x.style.display === "none") {
     x.style.display = "block";
-    videbu.innerText   = "göm trailer";
+    videbu.innerText   = "Göm trailer";
   } else {
     x.style.display = "none";
-    videbu.innerText   = "visa trailer";
+    videbu.innerText   = "Visa trailer";
   }
 }
 
@@ -203,14 +203,14 @@ function showInfo(i) {
   let inf = document.getElementById("info_"+i);
   let buu = document.getElementById("morei_"+i);
   
-  buu.innerText   = "mer info...";
+  buu.innerText   = "Mer info...";
   
   if (inf.style.display === "none") {
     inf.style.display = "block";
-    buu.innerText   = "göm info";
+    buu.innerText   = "Göm info";
   } else {
     inf.style.display = "none"; 
-    buu.innerText   = "mer info...";
+    buu.innerText   = "Mer info...";
  
   }
 }
