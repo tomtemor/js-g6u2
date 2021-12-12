@@ -1,7 +1,7 @@
 {
-  "name": "js-g6u2",
+  "name": "group-assignment-part-2",
   "version": "1.0.0",
-  "description": "JavaScript, Grupp 6, Gruppuppgift 2, SYNED21JON",
+  "description": "Grupp nr. 6, gruppuppgift del 2, JavaScript, SYNED21JON",
   "main": "index.js",
   "engines": {
     "node": "14.x"
@@ -9,12 +9,26 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Christer Klasson, Ida Gustafsson, Julia Magnusson, Marianne Nordlund, Matti Heinonen, Ronja �sterback",
+  "author": "Christer Klasson, Ida Gustafsson, Julia Magnusson, Marianne Nordlund, Matti Heinonen, Ronja Österback",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomtemor/js-g6u2.git"
+  },
+  "keywords": [
+    "Javascript",
+    "gruppuppgift",
+    "syned21jon",
+    "api"
+  ],
+  "bugs": {
+    "url": "https://github.com/tomtemor/js-g6u2/issues"
+  },
+  "homepage": "https://github.com/tomtemor/js-g6u2#readme"
 }
