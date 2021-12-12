@@ -8,7 +8,6 @@ window.onload = function () {
     console.log("Svar från servern");
 
     let filmer = JSON.parse(this.response);
-    console.log(filmer);
     let lista = "";
     let trailer_trailer = "";
     // Array med lista av filmerna som objekt.
