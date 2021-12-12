@@ -1,0 +1,14 @@
+.title {
+  background-color: rgb(230, 230, 230);
+  border-top: 1px solid olivedrab;
+  border-bottom: 3px solid olivedrab;
+  font-family: "Fjalla One", sans-serif;
+  padding: 10px;
+}
+
+.image {
+  width: 130px;
+  padding: 30px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
