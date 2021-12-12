@@ -142,7 +142,7 @@ window.onload = function () {
       lista +=
         "<td style='vertical-align: top;'> <button id='videb_" + i + "'onclick='showVID(" +
         i +
-        ")'>Visa trailer</button> <div id='" +
+        ")'>visa trailer</button> <div id='" +
         i +
         "'>";
 
@@ -187,14 +187,14 @@ window.onload = function () {
 function showVID(i) {
   let x = document.getElementById(i);
   let videbu = document.getElementById("videb_"+i);
-  videbu.innerText   = "Visa trailer";
+  videbu.innerText   = "visa trailer";
 
   if (x.style.display === "none") {
     x.style.display = "block";
     videbu.innerText   = "göm trailer";
   } else {
     x.style.display = "none";
-    videbu.innerText   = "Visa trailer";
+    videbu.innerText   = "visa trailer";
   }
 }
 
